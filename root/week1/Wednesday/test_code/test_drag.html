@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+    <title>React App</title>
+  </head>
+  <div id="nothing">
+
+      <p>asdfasdfasdfasdf</p>
+    </div>
+
+  <!-- <body> -->
+    <!-- <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+      This text can be <i>yay</i> edited by the user.
+    </div>
+    <button type="submit" id="submit-button">Console Log</button> -->
+
+    <div class="dropzone">
+      <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+        This div is draggable
+      </div>
+    </div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    
+    <style>
+      .nothing,
+      #draggable {
+        width: 200px;
+        height: 20px;
+        text-align: center;
+        background: white;
+      }
+    
+      .dropzone {
+        width: 200px;
+        height: 20px;
+        background: blueviolet;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+    </style>
+    
+    <script>
+      var dragged;
+    
+      /* events fired on the draggable target */
+      document.addEventListener("drag", function( event ) {
+
+        // automatically fires off when being dragged
+        // console.log("drag!!!!!!!!!!!!!!!!!!!!")
+      }, false);
+    
+      document.addEventListener("dragstart", function( event ) {
+          // store a ref. on the dragged elem
+          // console.log("drag start")
+          dragged = event.target;
+          // make it half transparent
+          event.target.style.opacity = .5;
+
+          // fired when drag begins
+          // console.log("start drag")
+      }, false);
+    
+      document.addEventListener("dragend", function( event ) {
+          // reset the transparency
+
+          // logs after being dropped!
+          // alert("dropped")
+          // console.log("drag end")
+          
+          event.target.style.opacity = "";
+      }, false);
+    
+      /* events fired on the drop targets */
+      document.addEventListener("dragover", function( event ) {
+          // prevent default to allow drop
+
+          event.preventDefault();
+
+          // fires automatically
+          // dropzone?
+          // console.log("drag over!!!!!")
+
+      }, false);
+    
+      document.addEventListener("dragenter", function( event ) {
+          // highlight potential drop target when the draggable element enters it
+          // console.log("dragenter")
+          if ( event.target.className == "dropzone" ) {
+              event.target.style.background = "purple";
+          }
+    
+          // when go into a dropzone
+          // console.log("drag enter")
+
+      }, false);
+    
+      document.addEventListener("dragleave", function( event ) {
+          // reset background of potential drop target when the draggable element leaves it
+          // console.log("dragleave")
+          if ( event.target.className == "dropzone" ) {
+              event.target.style.background = "";
+          }
+    
+          // leaves dropzone
+          // console.log("drag leave");
+
+      }, false);
+    
+      document.addEventListener("drop", function( event ) {
+          // prevent default action (open as link for some elements)
+          event.preventDefault();
+          // move dragged elem to the selected drop target
+          if ( event.target.className == "dropzone" ) {
+              event.target.style.background = "";
+              dragged.parentNode.removeChild( dragged );
+              event.target.appendChild( dragged );
+          }
+        
+      }, false);
+    </script>
+  <!-- </body> -->
+  <!-- <script>
+    document.getElementById("submit-button").addEventListener("click", () => 
+    console.log("$$$" + document.getElementById("text-area").innerHTML + "$$$"))
+  </script> -->
+</html>
