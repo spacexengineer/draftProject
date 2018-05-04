@@ -57,6 +57,15 @@ const squareTarget = {
 export default DropTarget(ItemTypes.KNIGHT, squareTarget, collect)(BoardSquare);
 ```
 
+In regards to the API, Joel mentioned covering
+
+* EditorState
+* ContentState
+
+I also found that SelectionState may be useful
+
+Will research more of the API before diving into the drag and drop plugin.
+
 ## From Charmaine
 
 # React DnD
