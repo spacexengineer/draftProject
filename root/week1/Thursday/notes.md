@@ -56,3 +56,25 @@ const squareTarget = {
 
 export default DropTarget(ItemTypes.KNIGHT, squareTarget, collect)(BoardSquare);
 ```
+
+## From Charmaine
+
+# React DnD
+
+* HTML5 backend
+* DragDropContext
+* DragSource
+  * type
+  * spec
+  * collection
+* DropTarget
+  * monitor
+
+to-do:
+
+* figure out how to move a block in draft.js
+* research the following:
+  * [EditorState](https://draftjs.org/docs/api-reference-editor-state.html#content)
+  * [ContentState](https://draftjs.org/docs/api-reference-content-state.html#content)
+  * [SelectionState](https://draftjs.org/docs/api-reference-selection-state.html#content)
+* review Loom's components
