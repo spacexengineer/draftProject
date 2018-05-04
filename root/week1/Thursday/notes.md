@@ -79,11 +79,42 @@ Will research more of the API before diving into the drag and drop plugin.
 * DropTarget
   * monitor
 
-to-do:
+# from Joel
 
 * figure out how to move a block in draft.js
+
+```
+Bio.js
+
+moveUp() {
+  // how we move one paragraph up?
+}
+
+moveDown() {
+  // how do we move one paragraph down?
+}
+
+render () {
+
+
+<button id="up-button" onClick={this.moveUp}>
+<button id="down-button" onClick={this.moveDown>
+
+<DraftEditor ... />
+
+// document.getElementById("up-button").addEventListener("click", function (evt) {
+  // your code here
+// })
+
+
+}
+```
+
+to-do:
+
 * research the following:
   * [EditorState](https://draftjs.org/docs/api-reference-editor-state.html#content)
   * [ContentState](https://draftjs.org/docs/api-reference-content-state.html#content)
   * [SelectionState](https://draftjs.org/docs/api-reference-selection-state.html#content)
 * review Loom's components
+* add Draft.js DnD plugin to message-editor-app example for additional practice
