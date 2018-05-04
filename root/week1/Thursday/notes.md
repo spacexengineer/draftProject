@@ -65,3 +65,25 @@ In regards to the API, Joel mentioned covering
 I also found that SelectionState may be useful
 
 Will research more of the API before diving into the drag and drop plugin.
+
+## From Charmaine
+
+# React DnD
+
+* HTML5 backend
+* DragDropContext
+* DragSource
+  * type
+  * spec
+  * collection
+* DropTarget
+  * monitor
+
+to-do:
+
+* figure out how to move a block in draft.js
+* research the following:
+  * [EditorState](https://draftjs.org/docs/api-reference-editor-state.html#content)
+  * [ContentState](https://draftjs.org/docs/api-reference-content-state.html#content)
+  * [SelectionState](https://draftjs.org/docs/api-reference-selection-state.html#content)
+* review Loom's components
